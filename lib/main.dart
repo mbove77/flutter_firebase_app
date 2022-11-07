@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trips_app/description_place.dart';
+import 'package:trips_app/gradient_back.dart';
 import 'package:trips_app/review_list.dart';
 
 void main() {
@@ -61,13 +62,23 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
+      // appBar: AppBar(
+      //   // Here we take the value from the MyHomePage object that was created by
+      //   // the App.build method, and use it to set our appbar title.
+      //   title: Text(widget.title),
+      // ),
       // body:  DescriptionPlace("Bahamas", 2.5, dummyText),
-      body: ReviewList(),
+      body: Stack(
+        children: [
+          ListView(
+            children: [
+              DescriptionPlace("Bahamas", 3.5, dummyText),
+              ReviewList()
+            ],
+          ),
+          GradientBack()
+        ],
+      ),
     );
   }
 }
