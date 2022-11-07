@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trips_app/stars.dart';
 
 class DescriptionPlace extends StatelessWidget {
   String tittle;
@@ -49,7 +50,12 @@ class DescriptionPlace extends StatelessWidget {
           ),
         ),
 
-        drawStars(startNumber)
+        Container(
+          margin: const EdgeInsets.only(
+            top: 323.0
+          ),
+          child: Stars(3.5, 25)
+        )
       ],
     );
 
@@ -62,60 +68,4 @@ class DescriptionPlace extends StatelessWidget {
 
     return tittleBlock;
   }
-
-  Row drawStars(double startNumber) {
-    final start = Container(
-      margin: const EdgeInsets.only(
-          top: 323.0,
-          right: 3.0
-      ),
-      child: const Icon(
-        Icons.star,
-        color: Color(0xFFf2C611),
-      ),
-    );
-
-    final halfStar = Container(
-      margin: const EdgeInsets.only(
-          top: 323.0,
-          right: 3.0
-      ),
-      child: const Icon(
-        Icons.star_half,
-        color: Color(0xFFf2C611),
-      ),
-    );
-
-    final emptyStar = Container(
-      margin: const EdgeInsets.only(
-          top: 323.0,
-          right: 3.0
-      ),
-      child: const Icon(
-        Icons.star_outline,
-        color: Colors.black26,
-      ),
-    );
-
-    var solidStars = int.parse(startNumber.toString().split('.')[0]);
-    var haveHalfStars =  false;
-    var emptyStars = 0;
-
-    if(int.parse(startNumber.toString().split('.')[1]) == 5) {
-      haveHalfStars = true;
-      emptyStars = 4 - solidStars;
-    } else {
-      emptyStars = 5 - solidStars;
-    }
-
-    return Row(
-      children: [
-        for (var i = 0; i < solidStars; i++) start,
-        if(haveHalfStars) halfStar,
-        for (var i = 0; i < emptyStars; i++) emptyStar,
-      ],
-    );
-
-  }
-
 }

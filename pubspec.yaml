@@ -89,9 +89,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  assets:
+    - assets/img/avatar.jpg
+    - assets/img/avatar2.jpg
+
   fonts:
    - family: Lato
      fonts:
-       - asset: fonts/Lato-Regular.ttf
-       - asset: fonts/Lato-Italic.ttf
+       - asset: assets/fonts/Lato-Regular.ttf
+       - asset: assets/fonts/Lato-Italic.ttf
          style: italic

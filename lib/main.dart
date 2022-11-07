@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trips_app/description_place.dart';
+import 'package:trips_app/review_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,8 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body:  DescriptionPlace("Bahamas", 2.5, dummyText),
-
+      // body:  DescriptionPlace("Bahamas", 2.5, dummyText),
+      body: ReviewList(),
     );
   }
 }
