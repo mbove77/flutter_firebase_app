@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trips_app/description_place.dart';
-import 'package:trips_app/gradient_back.dart';
+import 'package:trips_app/header_app_bar.dart';
 import 'package:trips_app/review_list.dart';
 
 void main() {
@@ -51,7 +51,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String dummyText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+  String dummyText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet ullamcorper dolor. Pellentesque quis enim a elit bibendum accumsan. Etiam id nulla quis magna luctus rhoncus. \n\nMorbi pharetra molestie libero nec accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et ante urna. Mauris a mauris porta, vulputate sapien vel, ultrices velit. Pellentesque vel diam nisi.Nulla sed pharetra massa.';
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ReviewList()
             ],
           ),
-          GradientBack()
+          HeaderAppBar()
         ],
       ),
     );

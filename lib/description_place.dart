@@ -15,7 +15,8 @@ class DescriptionPlace extends StatelessWidget {
       margin: const EdgeInsets.only(
         top: 20.0,
         left: 20.0,
-        right: 20.0
+        right: 20.0,
+        bottom: 10.0
       ),
 
       child: Text(
@@ -33,7 +34,7 @@ class DescriptionPlace extends StatelessWidget {
       children: [
         Container(
           margin: const EdgeInsets.only(
-            top: 320.0,
+            top: 300.0,
             left: 20.0,
             right: 20.0
           ),
@@ -52,7 +53,7 @@ class DescriptionPlace extends StatelessWidget {
 
         Container(
           margin: const EdgeInsets.only(
-            top: 323.0
+            top: 303.0
           ),
           child: Stars(3.5, 25)
         )

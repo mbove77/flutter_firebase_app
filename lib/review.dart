@@ -65,19 +65,19 @@ class Review extends StatelessWidget {
       ),
     );
 
-    final userDetails = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+    final userDetails =  Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           userName,
           userInfo,
           userCommet
-      ],
-    );
+        ],
+      );
+
 
     final photo = Container(
      margin: const EdgeInsets.only(
-       top: 20.0,
-       left: 20.0
+       left: 20.0,
      ),
       width: 80.0,
       height: 80.0,
@@ -90,11 +90,19 @@ class Review extends StatelessWidget {
       ),
     );
 
-    return Row(
-      children: [
-        photo,
-        Expanded(child: userDetails)
-      ],
-   );
+    return
+      Container(
+        margin: const EdgeInsets.only(
+          top: 10.0,
+          bottom: 10.0,
+
+    ),
+      child: Row(
+        children: [
+          photo,
+          Expanded(child: userDetails)
+        ],
+      )
+    );
   }
 }
