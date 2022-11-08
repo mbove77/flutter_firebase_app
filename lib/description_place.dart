@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trips_app/button_purple.dart';
 import 'package:trips_app/stars.dart';
 
 class DescriptionPlace extends StatelessWidget {
@@ -16,7 +17,6 @@ class DescriptionPlace extends StatelessWidget {
         top: 20.0,
         left: 20.0,
         right: 20.0,
-        bottom: 10.0
       ),
 
       child: Text(
@@ -34,7 +34,7 @@ class DescriptionPlace extends StatelessWidget {
       children: [
         Container(
           margin: const EdgeInsets.only(
-            top: 300.0,
+            top: 320.0,
             left: 20.0,
             right: 20.0
           ),
@@ -53,7 +53,7 @@ class DescriptionPlace extends StatelessWidget {
 
         Container(
           margin: const EdgeInsets.only(
-            top: 303.0
+            top: 323.0
           ),
           child: Stars(3.5, 25)
         )
@@ -61,9 +61,11 @@ class DescriptionPlace extends StatelessWidget {
     );
 
     final tittleBlock = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         tittleStart,
-        description
+        description,
+        ButtonPurple("Navigate")
       ],
     );
 
