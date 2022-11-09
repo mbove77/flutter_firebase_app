@@ -19,6 +19,7 @@ class _TripsAppCupertinoState extends State<TripsAppCupertino> {
     return Scaffold(
         bottomNavigationBar: CupertinoTabScaffold(
             tabBar: CupertinoTabBar(
+              backgroundColor: Colors.white.withOpacity(0.65),
               items: const [
                 BottomNavigationBarItem(
                     icon: Icon(Icons.home),
