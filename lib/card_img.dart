@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trips_app/fab_green.dart';
 
 class CardImg extends StatelessWidget {
   String pathImg = "assets/img/mountain.jpeg";
@@ -31,7 +32,13 @@ class CardImg extends StatelessWidget {
       ),
     );
 
-    return card;
+    return Stack(
+      alignment: const Alignment(0.85, 1.1),
+      children: [
+        card,
+        FabGreen()
+      ],
+    );
   }
 
 }
