@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trips_app/trips_app.dart';
+import 'package:trips_app/trips_app_cupertino.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TripsApp()
+      home: const TripsAppCupertino()
     );
   }
 }
