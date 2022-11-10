@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:trips_app/profile.dart';
+import 'package:trips_app/profile/profile.dart';
 import 'package:trips_app/search.dart';
 
 import 'home_trips.dart';
