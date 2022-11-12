@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:trips_app/home/home_trips.dart';
 import 'package:trips_app/profile/profile.dart';
 import 'package:trips_app/search.dart';
 
-import 'home_trips.dart';
 
 class TripsAppCupertino extends StatefulWidget {
   const TripsAppCupertino({Key? key}) : super(key: key);
@@ -23,15 +23,11 @@ class _TripsAppCupertinoState extends State<TripsAppCupertino> {
               items: const [
                 BottomNavigationBarItem(
                     icon: Icon(Icons.home),
-                    label: ""
-                ),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.search),
-                    label: ""
+                    label: "Home"
                 ),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.person),
-                    label: ""
+                    label: "Profile"
                 ),
               ],
             ),
@@ -42,10 +38,6 @@ class _TripsAppCupertinoState extends State<TripsAppCupertino> {
                   builder: (BuildContext context) => HomeTrips(),
                 );
               case 1:
-                return CupertinoTabView(
-                  builder: (BuildContext context) => Search(),
-                );
-              case 2:
                 return CupertinoTabView(
                   builder: (BuildContext context) => Profile(),
                 );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trips_app/profile/profile_header.dart';
+import 'package:trips_app/profile/profile_places_list.dart';
 import 'package:trips_app/profile/profile_toolbar.dart';
 
 class Profile extends StatelessWidget {
@@ -10,7 +11,8 @@ class Profile extends StatelessWidget {
     return Stack(
       children: const [
         ProfileHeader(),
-        ProfileToolbar()
+        ProfileToolbar(),
+        ProfilePlacesList()
       ],
     );
   }

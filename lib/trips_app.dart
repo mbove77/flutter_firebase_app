@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trips_app/home_trips.dart';
+import 'package:trips_app/home/home_trips.dart';
 import 'package:trips_app/profile/profile.dart';
 import 'package:trips_app/search.dart';
 
@@ -32,29 +32,16 @@ class _TripsApp extends State<TripsApp> {
     return Scaffold(
         bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
-              canvasColor: Colors.white,
-              primaryColor: Colors.purple
-            ),
+                canvasColor: Colors.white, primaryColor: Colors.purple),
             child: BottomNavigationBar(
               items: const [
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.home),
-                    label: ""
-                ),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.search),
-                    label: ""
-                ),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.person),
-                    label: ""
-                ),
+                BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+                BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
+                BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
               ],
               currentIndex: tabIndex,
               onTap: onTapTapped,
-            )
-          ),
-        body: pageList[tabIndex]
-    );
+            )),
+        body: pageList[tabIndex]);
   }
 }

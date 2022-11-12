@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trips_app/fab_green.dart';
+import 'package:trips_app/components/fab_green.dart';
 
 class CardImg extends StatelessWidget {
   String pathImg = "assets/img/mountain.jpeg";
