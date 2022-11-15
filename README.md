@@ -1,16 +1,12 @@
-# trips_app
+# Trips Flutter App
+Es una aplicación con fines académicos, para explorar el desarrollo de interfaces con Flutter.
 
-A new Flutter project.
+## Tecnologías bajo el capot
+Esta app está construida con el lenguaje de programación Dart y el SDK de Flutter.
+La misma aplicación está compilada tanto en Android como en iOS como se puede ver en las capturas.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Android  | iOS  |
+| --- | --- |
+| <img src="assets/img/captures/cap2.png" width="250"> | <img src="assets/img/captures/iOS-cap1.png" width="250"> |
+| <img src="assets/img/captures/cap3.png" width="250"> | <img src="assets/img/captures/iOS-cap2.png" width="250"> |
+| <img src="assets/img/captures/cap1.png" width="250"> | <img src="assets/img/captures/iOS-cap3.png" width="250"> |
