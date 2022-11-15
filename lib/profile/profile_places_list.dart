@@ -6,7 +6,7 @@ class ProfilePlacesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String dummyText = "Lorem ipsum dolor sit amet consectetur, adipiscing elit congue sem diam.";
+    const String dummyText = "Lorem ipsum dolor sit amet consectetur, adipiscing elit congue sem diam.";
     return Container(
       margin: const EdgeInsets.only(
         top: 275.0,
