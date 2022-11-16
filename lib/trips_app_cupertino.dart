@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:trips_app/home/home_trips.dart';
-import 'package:trips_app/profile/profile.dart';
-import 'package:trips_app/search.dart';
+import 'place/ui/screens/home_trips.dart';
+import 'user/ui/widgets/profile.dart';
 
 
 class TripsAppCupertino extends StatefulWidget {

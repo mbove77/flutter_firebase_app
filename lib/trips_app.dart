@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trips_app/home/home_trips.dart';
-import 'package:trips_app/profile/profile.dart';
-import 'package:trips_app/search.dart';
+import 'package:flutter_firebase_app/place/ui/screens/search.dart';
+import 'user/ui/widgets/profile.dart';
+import 'place/ui/screens/home_trips.dart';
 
 class TripsApp extends StatefulWidget {
   const TripsApp({super.key});

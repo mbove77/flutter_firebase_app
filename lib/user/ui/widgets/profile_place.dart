@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trips_app/profile/profile_place_details.dart';
+import 'package:flutter_firebase_app/user/ui/widgets/profile_place_details.dart';
 
 class ProfilePlace extends StatelessWidget {
   ProfilePlace(

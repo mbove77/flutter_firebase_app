@@ -1,4 +1,4 @@
-package com.martin.bove.trips_app
+package com.martin.bove.flutter_firebase_app
 
 import android.graphics.Color
 import android.os.Build

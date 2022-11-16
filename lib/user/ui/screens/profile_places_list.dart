@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trips_app/profile/profile_place.dart';
+import '../widgets/profile_place.dart';
 
 class ProfilePlacesList extends StatelessWidget {
   const ProfilePlacesList({Key? key}) : super(key: key);

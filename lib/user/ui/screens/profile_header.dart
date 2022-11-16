@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trips_app/profile/profile_toolbar.dart';
+import 'profile_toolbar.dart';
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({Key? key}) : super(key: key);
