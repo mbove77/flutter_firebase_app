@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "200293169188",
+    "project_id": "flutterfirebaseapp-c5433",
+    "storage_bucket": "flutterfirebaseapp-c5433.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200293169188:android:543a5e5b34fe8b5615c0b1",
+        "android_client_info": {
+          "package_name": "com.martin.bove.flutter_firebase_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200293169188-s97b7m7hfs8iefgrhv6098n5neb7g9v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe1YLG2Nkk0kPXF6aj7GTIVfoqLVOirSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200293169188-s97b7m7hfs8iefgrhv6098n5neb7g9v3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "200293169188-q590fl2itkaasumkbbnio16igudaojdb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.martin.bove.tripsApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
