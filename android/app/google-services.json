@@ -14,24 +14,24 @@
       },
       "oauth_client": [
         {
-          "client_id": "200293169188-s97b7m7hfs8iefgrhv6098n5neb7g9v3.apps.googleusercontent.com",
+          "client_id": "200293169188-eg987f16mteosijrquuc95kddicbcq75.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDe1YLG2Nkk0kPXF6aj7GTIVfoqLVOirSM"
+          "current_key": "AIzaSyAjrrGV4pd5ED5LVptfvVAsOoVwBNwm7GU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "200293169188-s97b7m7hfs8iefgrhv6098n5neb7g9v3.apps.googleusercontent.com",
+              "client_id": "200293169188-eg987f16mteosijrquuc95kddicbcq75.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "200293169188-q590fl2itkaasumkbbnio16igudaojdb.apps.googleusercontent.com",
+              "client_id": "200293169188-eg987f16mteosijrquuc95kddicbcq75.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.martin.bove.tripsApp"
