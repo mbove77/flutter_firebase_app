@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_app/trips_app_cupertino.dart';
 import 'package:flutter_firebase_app/user/bloc/bloc_user.dart';
 import 'package:flutter_firebase_app/user/repository/firebase_auth.dart';
 import 'package:flutter_firebase_app/widgets/gradient_back.dart';
@@ -19,7 +20,20 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     userBloc = BlocProvider.of(context);
-    return googleLoginUI();
+    return _handleSessionState();
+  }
+
+  Widget _handleSessionState() {
+    return StreamBuilder(
+      stream: userBloc.authStatus,
+      builder: (context, snapshot) {
+        if(!snapshot.hasData || snapshot.hasError) {
+          return googleLoginUI();
+        } else {
+          return const TripsAppCupertino();
+        }
+      },
+    );
   }
 
   Widget googleLoginUI() {

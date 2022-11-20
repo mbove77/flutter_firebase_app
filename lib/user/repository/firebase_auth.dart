@@ -17,12 +17,6 @@ class FirebaseAuthApi {
     UserCredential authResult = await _auth.signInWithCredential(credential);
     User? user = authResult.user;
 
-    if (user != null) {
-      print("User Name: ${user?.displayName}");
-      print("User Email ${user?.email}");
-    } else {
-      print("Usuario no registrado.");
-    }
     return user;
   }
 
