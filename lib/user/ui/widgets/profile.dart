@@ -9,10 +9,10 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children: const [
+      children: [
         ProfileHeader(),
         ProfileToolbar(),
-        ProfilePlacesList()
+        const ProfilePlacesList()
       ],
     );
   }

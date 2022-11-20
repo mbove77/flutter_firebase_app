@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_firebase_app/place/ui/screens/search.dart';
+import 'package:flutter_firebase_app/user/bloc/bloc_user.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'place/ui/screens/home_trips.dart';
 import 'user/ui/widgets/profile.dart';
 
@@ -25,6 +28,10 @@ class _TripsAppCupertinoState extends State<TripsAppCupertino> {
                     label: "Home"
                 ),
                 BottomNavigationBarItem(
+                    icon: Icon(Icons.search),
+                    label: "Search"
+                ),
+                BottomNavigationBarItem(
                     icon: Icon(Icons.person),
                     label: "Profile"
                 ),
@@ -38,7 +45,16 @@ class _TripsAppCupertinoState extends State<TripsAppCupertino> {
                 );
               case 1:
                 return CupertinoTabView(
-                  builder: (BuildContext context) => Profile(),
+                  builder: (BuildContext context) => const Search(),
+                );
+              case 2:
+                return CupertinoTabView(
+                  builder: (BuildContext context) {
+                    return BlocProvider<UserBloc>(
+                      bloc: UserBloc(),
+                      child: const Profile(),
+                    );
+                  }
                 );
               default:  return CupertinoTabView(
                 builder: (BuildContext context) => HomeTrips(),

@@ -13,6 +13,10 @@ class UserBloc implements Bloc {
     return _authRepo.loginFirebase();
   }
 
+  signOut() {
+    _authRepo.signOut();
+  }
+
   @override
   void dispose() {
     // TODO: implement dispose

@@ -1,81 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_app/user/bloc/bloc_user.dart';
+import 'package:flutter_firebase_app/widgets/circle_button.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class ProfileToolbar extends StatelessWidget {
-  const ProfileToolbar({Key? key}) : super(key: key);
+  ProfileToolbar({Key? key}) : super(key: key);
+  late UserBloc userBloc;
 
   @override
   Widget build(BuildContext context) {
+    userBloc = BlocProvider.of(context);
     return Container(
       margin: const EdgeInsets.only(
         top: 190.0,
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(
-            width: 50.0,
-            height: 40.0,
-            margin: const EdgeInsets.only(left: 20.0, top: 20.0),
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-            child: const Icon(
-              Icons.bookmark_border,
-              color: Colors.indigo,
-            ),
-          ),
-          Container(
-            width: 50.0,
-            height: 40.0,
-            margin: const EdgeInsets.only(left: 20.0, top: 20.0),
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-            child: const Icon(
-              Icons.card_giftcard,
-              color: Colors.indigo,
-            ),
-          ),
-          Container(
-            width: 65.0,
-            height: 65.0,
-            margin: const EdgeInsets.only(left: 20.0, top: 20.0),
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-            child: const Icon(
-              Icons.add,
-              color: Colors.indigo,
-            ),
-          ),
-          Container(
-            width: 50.0,
-            height: 40.0,
-            margin: const EdgeInsets.only(left: 20.0, top: 20.0),
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-            child: const Icon(
-              Icons.mail,
-              color: Colors.indigo,
-            ),
-          ),
-          Container(
-            width: 50.0,
-            height: 40.0,
-            margin: const EdgeInsets.only(left: 20.0, top: 20.0),
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-            child: const Icon(
-              Icons.person,
-              color: Colors.indigo,
-            ),
-          ),
+          CircleButton(null, Icons.vpn_key, 50, Colors.indigo, () { }),
+          CircleButton(null, Icons.add, 65, Colors.indigo, () { }),
+          CircleButton(null, Icons.exit_to_app, 50, Colors.indigo, () { userBloc.signOut(); }),
         ],
       ),
     );
