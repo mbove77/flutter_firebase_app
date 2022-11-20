@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_app/user/bloc/bloc_user.dart';
 import 'package:flutter_firebase_app/user/repository/firebase_auth.dart';
 import 'package:flutter_firebase_app/widgets/gradient_back.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -12,8 +14,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  late UserBloc userBloc;
+
   @override
   Widget build(BuildContext context) {
+    userBloc = BlocProvider.of(context);
     return googleLoginUI();
   }
 
@@ -38,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SignInButton(
                 Buttons.Google,
                 onPressed: () {
-                  FirebaseAuthApi().signInWithGoogle();
+                    userBloc.login().then((user) => print("El usuario es ${user?.displayName}"));
                 },
               )
             ],
