@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_app/trips_app_cupertino.dart';
 import 'package:flutter_firebase_app/user/bloc/bloc_user.dart';
+import 'package:flutter_firebase_app/user/model/app_user.dart';
 import 'package:flutter_firebase_app/user/repository/firebase_auth.dart';
 import 'package:flutter_firebase_app/widgets/gradient_back.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
@@ -27,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return StreamBuilder(
       stream: userBloc.authStatus,
       builder: (context, snapshot) {
-        if(!snapshot.hasData || snapshot.hasError) {
+        if (!snapshot.hasData || snapshot.hasError) {
           return googleLoginUI();
         } else {
           return const TripsAppCupertino();
@@ -44,20 +45,30 @@ class _LoginScreenState extends State<LoginScreen> {
           GradientBack("", MediaQuery.of(context).size.height),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children:  [
+            children: [
               const Text(
-                  "Welcome \n This is your travel app!",
-                  style: TextStyle(
-                      fontSize: 35,
-                      fontFamily: "lato",
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
+                "Welcome \n This is your travel app!",
+                style: TextStyle(
+                    fontSize: 35,
+                    fontFamily: "lato",
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
               const SizedBox(height: 30),
               SignInButton(
                 Buttons.Google,
                 onPressed: () {
-                    userBloc.login().then((user) => print("El usuario es ${user?.displayName}"));
+                  userBloc.login().then((user) => {
+                        userBloc.updateUserData(AppUser(
+                          null,
+                          user?.uid,
+                          user?.displayName??'',
+                          user?.email??'',
+                          user?.photoURL??'',
+                          null,
+                          null
+                        ))
+                      });
                 },
               )
             ],

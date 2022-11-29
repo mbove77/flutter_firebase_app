@@ -84,7 +84,6 @@ class ProfileHeader extends StatelessWidget {
   Widget userBlock(String userName, String email, DateTime lastLogin) {
     String myDate = DateFormat('dd/MM/yyyy - hh:mm').format(lastLogin);
 
-
     return Container(
       margin: const EdgeInsets.only(top: 12.0, left: 15.0),
       child: Column(
