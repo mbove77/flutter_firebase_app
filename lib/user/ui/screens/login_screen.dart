@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Stack(
         alignment: Alignment.center,
         children: [
-          GradientBack("", MediaQuery.of(context).size.height),
+          GradientBack("", MediaQuery.of(context).size.height, false),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
