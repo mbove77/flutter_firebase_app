@@ -3,6 +3,8 @@ import '../widgets/card_img_list.dart';
 import '../../../widgets/gradient_back.dart';
 
 class HeaderAppBar extends StatelessWidget {
+  const HeaderAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Stack(

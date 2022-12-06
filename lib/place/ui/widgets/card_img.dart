@@ -1,19 +1,26 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import '../../../widgets/fab_green.dart';
 
 class CardImg extends StatelessWidget {
+  double? width      = 250.0;
+  double? height     = 350.0;
+  double? marginLeft;
   String pathImg = "assets/img/mountain.jpeg";
+  IconData iconData;
+  VoidCallback onPressedFabIcon;
 
-  CardImg(this.pathImg);
+  CardImg({required this.pathImg, this.width, this.height, this.marginLeft, required this.iconData,
+      required this.onPressedFabIcon, super.key});
 
   @override
   Widget build(BuildContext context) {
     final card = Container(
-      width: 250.0,
-      height: 350.0,
-      margin: const EdgeInsets.only(
-        top: 80.0,
-        left: 20.0
+      width: width,
+      height: height,
+      margin: EdgeInsets.only(
+        left: marginLeft ?? 20.0,
       ),
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -33,10 +40,10 @@ class CardImg extends StatelessWidget {
     );
 
     return Stack(
-      alignment: const Alignment(0.85, 1.1),
+      alignment: const Alignment(0.85, 1.2),
       children: [
         card,
-        FabGreen()
+        FabGreen(buttonCallBack: onPressedFabIcon, iconData: iconData)
       ],
     );
   }

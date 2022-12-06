@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_app/place/ui/widgets/card_img.dart';
 import 'package:flutter_firebase_app/place/ui/widgets/text_input_location.dart';
 import 'package:flutter_firebase_app/widgets/gradient_back.dart';
 import 'package:flutter_firebase_app/widgets/text_input.dart';
@@ -41,16 +42,25 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
             margin: const EdgeInsets.only(top: 120, bottom: 20),
             child: ListView(
               children: [
-                Container(),
                 Container(
-                  margin: const EdgeInsets.only(bottom: 20),
+                    alignment: Alignment.center,
+                    child: CardImg(
+                        pathImg: "assets/img/placeholder.png",
+                        width: 350,
+                        height: 220,
+                        marginLeft: 0,
+                        iconData: Icons.camera_alt,
+                        onPressedFabIcon: () {})),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 20, top: 30),
                   child: TextInput("Tittle", null, controllerTittlePlace, 1),
                 ),
-                TextInput("Description", TextInputType.multiline, controllerDescriptionPlace, 4),
+                TextInput("Description", TextInputType.multiline,
+                    controllerDescriptionPlace, 4),
                 Container(
-                  margin: const EdgeInsets.only(top: 20),
-                  child: TextInputLocation("Location", controllerLocationPlace, Icons.location_on)
-                ),
+                    margin: const EdgeInsets.only(top: 20),
+                    child: TextInputLocation("Location",
+                        controllerLocationPlace, Icons.location_on)),
               ],
             ),
           )

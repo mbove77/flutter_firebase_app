@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 
 class FabGreen extends StatefulWidget {
 
+  final IconData iconData;
+  final VoidCallback buttonCallBack;
+
+
+  const FabGreen({super.key, required this.iconData, required this.buttonCallBack});
+
   @override
   State<StatefulWidget> createState() {
     return _FabGreen();
@@ -29,10 +35,10 @@ class _FabGreen extends State<FabGreen> {
   @override
   Widget build(BuildContext context) {
    return FloatingActionButton(
-     onPressed: onPressedFab,
+     onPressed: widget.buttonCallBack,
      backgroundColor: const Color(0xff11da53),
      mini: true,
-     child: (isSelected) ? const Icon(Icons.favorite) : const Icon(Icons.favorite_border),
+     child: Icon(widget.iconData),
    );
   }
 }
