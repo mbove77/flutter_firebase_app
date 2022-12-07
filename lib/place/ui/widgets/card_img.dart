@@ -1,5 +1,4 @@
-import 'dart:ffi';
-
+import 'dart:io';
 import 'package:flutter/material.dart';
 import '../../../widgets/fab_green.dart';
 
@@ -7,15 +6,23 @@ class CardImg extends StatelessWidget {
   double? width      = 250.0;
   double? height     = 350.0;
   double? marginLeft;
-  String pathImg = "assets/img/mountain.jpeg";
+  String? fileImgPath;
+  String? assetFile;
   IconData iconData;
   VoidCallback onPressedFabIcon;
 
-  CardImg({required this.pathImg, this.width, this.height, this.marginLeft, required this.iconData,
+  CardImg({this.fileImgPath, this.assetFile, this.width, this.height, this.marginLeft, required this.iconData,
       required this.onPressedFabIcon, super.key});
 
   @override
   Widget build(BuildContext context) {
+    ImageProvider<Object> provider;
+    if(fileImgPath != null) {
+      provider = FileImage(File(fileImgPath!));
+    } else {
+      provider = AssetImage(assetFile!);
+    }
+
     final card = Container(
       width: width,
       height: height,
@@ -24,8 +31,8 @@ class CardImg extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(pathImg),
-            fit: BoxFit.cover 
+            image: provider,
+            fit: BoxFit.cover
         ),
         borderRadius: const BorderRadius.all(Radius.circular(10.0)),
         shape: BoxShape.rectangle,

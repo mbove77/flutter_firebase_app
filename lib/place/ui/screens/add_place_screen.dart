@@ -9,11 +9,11 @@ import 'package:flutter_firebase_app/widgets/button_purple.dart';
 import 'package:flutter_firebase_app/widgets/gradient_back.dart';
 import 'package:flutter_firebase_app/widgets/text_input.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AddPlaceScreen extends StatefulWidget {
-  File? image;
-
-  AddPlaceScreen(Key? key, this.image) : super(key: key);
+  XFile? image;
+  AddPlaceScreen({Key? key, this.image}) : super(key: key);
 
   @override
   State<AddPlaceScreen> createState() => _AddPlaceScreenState();
@@ -54,7 +54,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                   Container(
                       alignment: Alignment.center,
                       child: CardImg(
-                          pathImg: "assets/img/placeholder.png",
+                          fileImgPath: widget.image?.path,
                           width: 350,
                           height: 220,
                           marginLeft: 0,

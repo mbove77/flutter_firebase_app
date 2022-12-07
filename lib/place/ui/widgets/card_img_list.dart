@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'card_img.dart';
 
 class CardImgList extends StatelessWidget {
@@ -13,31 +12,31 @@ class CardImgList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: [
           CardImg(
-              pathImg: "assets/img/beach_palm.jpeg",
+              assetFile:"assets/img/beach_palm.jpeg",
               width: 350.0,
               height: 220.0,
               iconData: Icons.favorite_border,
               onPressedFabIcon: () {}),
           CardImg(
-              pathImg: "assets/img/mountain.jpeg",
+              assetFile: "assets/img/mountain.jpeg",
               width: 350.0,
               height: 220.0,
               iconData: Icons.favorite_border,
               onPressedFabIcon: () {}),
           CardImg(
-              pathImg: "assets/img/mountain_stars.jpeg",
+              assetFile: "assets/img/mountain_stars.jpeg",
               width: 350.0,
               height: 220.0,
               iconData: Icons.favorite_border,
               onPressedFabIcon: () {}),
           CardImg(
-              pathImg: "assets/img/river.jpeg",
+              assetFile: "assets/img/river.jpeg",
               width: 350.0,
               height: 220.0,
               iconData: Icons.favorite_border,
               onPressedFabIcon: () {}),
           CardImg(
-              pathImg: "assets/img/sunset.jpeg",
+              assetFile: "assets/img/sunset.jpeg",
               width: 350.0,
               height: 220.0,
               iconData: Icons.favorite_border,
