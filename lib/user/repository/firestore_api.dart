@@ -34,6 +34,7 @@ class FirestoreApi {
       'name'       : place.name,
       'description': place.description,
       'likes'      : place.likes,
+      'photoURL'   : place.urlImage,
       'userOwner'  : "$USERS/${user?.uid}",
     });
   }
