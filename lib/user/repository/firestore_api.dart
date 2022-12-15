@@ -35,7 +35,14 @@ class FirestoreApi {
       'description': place.description,
       'likes'      : place.likes,
       'photoURL'   : place.urlImage,
-      'userOwner'  : "$USERS/${user?.uid}",
+      'userOwner'  : _db.doc("$USERS/${user?.uid}"),
+    }).then((placeRef) {
+      DocumentReference refUser = _db.collection(USERS).doc(user?.uid);
+      refUser.update({
+        'myPlaces': FieldValue.arrayUnion([
+          _db.doc("$PLACES/${placeRef.id}")
+        ])
+      });
     });
   }
 }
