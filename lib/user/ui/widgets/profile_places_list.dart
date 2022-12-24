@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_app/user/bloc/bloc_user.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
-import '../widgets/profile_place.dart';
+import 'profile_place.dart';
 
 class ProfilePlacesList extends StatelessWidget {
   ProfilePlacesList({Key? key}) : super(key: key);

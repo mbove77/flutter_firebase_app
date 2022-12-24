@@ -45,8 +45,13 @@ class FirestoreApi {
     });
   }
 
-  Stream<QuerySnapshot> getPlacesStream() {
-    Stream<QuerySnapshot> placesStream = _db.collection(PLACES).snapshots();
+  Stream<QuerySnapshot> getPlacesStream(String uid) {
+    Stream<QuerySnapshot> placesStream = _db
+        .collection(PLACES)
+        .where("userOwner",
+            isEqualTo: FirebaseFirestore.instance.doc("$USERS/$uid"))
+        .snapshots();
+
     return placesStream;
   }
 

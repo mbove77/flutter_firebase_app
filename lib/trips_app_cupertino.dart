@@ -4,7 +4,7 @@ import 'package:flutter_firebase_app/place/ui/screens/search.dart';
 import 'package:flutter_firebase_app/user/bloc/bloc_user.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'place/ui/screens/home_trips.dart';
-import 'user/ui/widgets/profile.dart';
+import 'user/ui/screens/profile.dart';
 
 
 class TripsAppCupertino extends StatefulWidget {

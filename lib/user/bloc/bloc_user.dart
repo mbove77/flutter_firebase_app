@@ -30,7 +30,7 @@ class UserBloc implements Bloc {
 
   Future<UploadTask> uploadFile(String path, File image) => _storageRepo.uploadFile(path, image);
 
-  Stream<QuerySnapshot> getPlacesStream() => _firestoreRepo.getPlacesStream();
+  Stream<QuerySnapshot> getPlacesStream() => _firestoreRepo.getPlacesStream(currentUser!.uid);
 
   List<ProfilePlace> buildPlaces(List<DocumentSnapshot> placeList) => _firestoreRepo.buildPlaces(placeList);
 

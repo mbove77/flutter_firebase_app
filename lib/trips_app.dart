@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_app/place/ui/screens/search.dart';
-import 'user/ui/widgets/profile.dart';
+import 'user/ui/screens/profile.dart';
 import 'place/ui/screens/home_trips.dart';
 
 class TripsApp extends StatefulWidget {

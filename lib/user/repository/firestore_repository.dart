@@ -8,6 +8,6 @@ class FirestoreRepository {
   final firestoreApi = FirestoreApi();
   void updateUserData(AppUser user) => firestoreApi.updateUserData(user);
   Future<void> updatePlaceData(Place place) => firestoreApi.updatePlaceData(place);
-  Stream<QuerySnapshot> getPlacesStream() => firestoreApi.getPlacesStream();
+  Stream<QuerySnapshot> getPlacesStream(String uid) => firestoreApi.getPlacesStream(uid);
   List<ProfilePlace> buildPlaces(List<DocumentSnapshot> placeList) => firestoreApi.buildPlaces(placeList);
 }
