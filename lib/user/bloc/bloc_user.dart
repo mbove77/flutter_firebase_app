@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter_firebase_app/user/model/app_user.dart';
 import 'package:flutter_firebase_app/user/repository/auth_repository.dart';
@@ -9,6 +10,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../place/model/place.dart';
 import '../../place/repository/firebase_storage_repository.dart';
+import '../ui/widgets/profile_place.dart';
 
 class UserBloc implements Bloc {
 
@@ -27,6 +29,10 @@ class UserBloc implements Bloc {
   User? get currentUser => FirebaseAuth.instance.currentUser;
 
   Future<UploadTask> uploadFile(String path, File image) => _storageRepo.uploadFile(path, image);
+
+  Stream<QuerySnapshot> getPlacesStream() => _firestoreRepo.getPlacesStream();
+
+  List<ProfilePlace> buildPlaces(List<DocumentSnapshot> placeList) => _firestoreRepo.buildPlaces(placeList);
 
   @override
   void dispose() {

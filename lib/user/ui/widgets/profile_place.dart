@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_app/user/ui/widgets/profile_place_details.dart';
 
-class ProfilePlace extends StatelessWidget {
-  ProfilePlace(
-      Key? key, this.imageUrl, this.tittle, this.description, this.steps)
-      : super(key: key);
+import '../../../place/model/place.dart';
 
-  String imageUrl, tittle, description, steps;
+class ProfilePlace extends StatelessWidget {
+
+  Place place;
+  ProfilePlace({Key? key, required this.place}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class ProfilePlace extends StatelessWidget {
       margin: const EdgeInsets.only(top: 20.0, left: 10.0, right: 10),
       decoration: BoxDecoration(
           image:
-              DecorationImage(image: AssetImage(imageUrl), fit: BoxFit.cover),
+              DecorationImage(image: NetworkImage(place.urlImage), fit: BoxFit.cover),
           borderRadius: const BorderRadius.all(Radius.circular(10.0)),
           shape: BoxShape.rectangle,
           boxShadow: const <BoxShadow>[
@@ -30,7 +30,7 @@ class ProfilePlace extends StatelessWidget {
     return Stack(
       children: [
         card,
-        ProfilePlaceDetails(key, tittle, description, steps),
+        ProfilePlaceDetails(tittle: place.name, description: place.description, likes: place.likes),
       ],
     );
   }

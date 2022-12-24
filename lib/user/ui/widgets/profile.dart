@@ -12,7 +12,7 @@ class Profile extends StatelessWidget {
       children: [
         ProfileHeader(),
         ProfileToolbar(),
-        const ProfilePlacesList()
+        ProfilePlacesList()
       ],
     );
   }

@@ -8,4 +8,6 @@ class FirebaseStorageRepository {
 
   Future<UploadTask> uploadFile(String path, File image) =>
       storageApi.uploadFile(path, image);
+
+
 }

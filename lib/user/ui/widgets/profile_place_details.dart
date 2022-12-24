@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ProfilePlaceDetails extends StatelessWidget {
-  ProfilePlaceDetails(Key? key, this.tittle, this.description, this.steps)
+  String tittle, description;
+  int? likes;
+
+  ProfilePlaceDetails({Key? key, required this.tittle, required this.description,  this.likes})
       : super(key: key);
-  String tittle, description, steps;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class ProfilePlaceDetails extends StatelessWidget {
                 offset: Offset(0.0, 7.0))
           ]),
       child: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -33,15 +35,15 @@ class ProfilePlaceDetails extends StatelessWidget {
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               description,
               style: const TextStyle(
                   fontFamily: "Lato", fontSize: 13.0, color: Colors.black45),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
-              steps,
+              "$likes likes",
               style: const TextStyle(
                   fontFamily: "Lato",
                   fontSize: 14.0,
